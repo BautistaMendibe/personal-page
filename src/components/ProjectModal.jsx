@@ -35,7 +35,7 @@ export default function ProjectModal({ title, detailDescription, image, images, 
                 </div>
 
                 {/* Sección de Imágenes (Derecha) */}
-                <div className="md:w-2/3 p-4 flex flex-col items-center justify-start overflow-y-auto space-y-4">
+                <div className="md:w-2/3 p-4 flex flex-col items-center justify-start overflow-y-auto scrollbar-custom space-y-4">
                     {images.map((img, index) => (
                         <img
                             key={index}
