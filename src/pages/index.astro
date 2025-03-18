@@ -8,7 +8,12 @@ import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
 import Blog from "../components/icons/Blog.astro";
-import BlogCard from "../components/BlogCard.astro";
+import BlogCard from "../components/BlogCard";
+
+import BlogCard from "../components/BlogCard.jsx";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
 ---
 
 <Layout
@@ -51,7 +56,7 @@ import BlogCard from "../components/BlogCard.astro";
         <Blog class="size-8" />
         Blog
       </TitleSection>
-      <BlogCard />
+      <BlogCard posts={posts} client:load />
     </SectionContainer>
 
   </div>
