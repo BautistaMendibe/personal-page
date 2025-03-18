@@ -6,6 +6,7 @@ import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Angular from "./icons/Angular.astro"
 import NodeJS from "./icons/NodeJS.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
 
 const TAGS = {
   NEXT: {
@@ -31,29 +32,39 @@ const TAGS = {
   BOOTSTRAP: {
     name: "Bootstrap",
     class: "bg-[#bbaefc] text-white",
-    icon: NodeJS,
+    icon: Bootstrap,
   },
 }
 const PROJECTS = [
   {
-    title: "Clothing Store Management App - Sales, inventory, products, employees",
+    title: "Sistema ERP para la gestión de tiendas de ropa: ventas, inventario, productos, empleados",
     description:
-      "Application for managing a clothing store, including employee and customer registration.\n" +
-        "Application connected to the AFIP/ARCA API to invoice sales.\n" +
-        "Sales by card, cash, and QR code.\n" +
-        "Sales and purchase statistics.",
+      "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes.\n" +
+        "Aplicación conectada a la API de AFIP/ARCA para la facturación de ventas.\n" +
+        "Ventas con tarjeta, efectivo y código QR.\n" +
+        "Estadísticas de ventas y compras.",
     link: "",
     github: "",
     image: "/projects/calido-home.png",
     tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.BOOTSTRAP],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+        "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
+    link: "",
+    github: "",
+    image: "/projects/cj-home.png",
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.BOOTSTRAP],
+  },
+  {
+    title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
+    description:
+        "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
+    link: "",
+    github: "",
+    image: "/projects/ga-home.png",
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.BOOTSTRAP],
   },
 ]
 ---
