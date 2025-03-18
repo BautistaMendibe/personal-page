@@ -1,7 +1,13 @@
 export default function ProjectModal({ title, description, image, tags, onClose }) {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-lg w-full relative shadow-lg">
+        <div
+            className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50"
+            onClick={onClose} // Cierra el modal si se hace clic en el fondo
+        >
+            <div
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-lg w-full relative shadow-lg"
+                onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
+            >
                 {/* Botón de Cerrar */}
                 <button className="absolute top-3 right-3 text-gray-600 dark:text-gray-300" onClick={onClose}>
                     ✖
