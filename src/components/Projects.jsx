@@ -37,12 +37,23 @@ const PROJECTS = [
             "public/projects/caja/4.png",
         ],
     },
-    //{
-    //    title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
-    //    description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
-    //    image: "public/projects/ga-home.png",
-    //    tags: ["Angular", "Node.js", "Bootstrap"],
-    //},
+    {
+        title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
+        description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
+        detailDescription: "Plataforma para la gestión y evaluación de procedimientos relacionados con la gestión de la calidad alimentaria.\n" +
+            "- Arquitectura de microservicios.\n" +
+            "- Frontend en Angular.\n" +
+            "- Backend en Node.js.\n" +
+            "- Desarrollo en TypeScript.",
+        image: "public/projects/ga-home.png",
+        tags: ["Angular", "Node.js", "Bootstrap"],
+        images: [
+            "public/projects/alimentos/1.png",
+            "public/projects/alimentos/2.png",
+            "public/projects/alimentos/3.png",
+            "public/projects/alimentos/4.png",
+        ],
+    },
 ];
 
 export default function Projects() {
