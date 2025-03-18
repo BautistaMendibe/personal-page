@@ -9,7 +9,7 @@ export default function ProjectModal({ title, detailDescription, image, images, 
             onClick={onClose} // Cierra el modal si se hace clic fuera
         >
             <div
-                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-5xl relative shadow-lg flex flex-col md:flex-row"
+                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-6xl relative shadow-lg flex flex-col md:flex-row"
                 onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
             >
                 {/* Botón de Cerrar */}
@@ -18,10 +18,10 @@ export default function ProjectModal({ title, detailDescription, image, images, 
                 </button>
 
                 {/* Sección de Información (Izquierda) */}
-                <div className="md:w-1/3 p-4 flex flex-col justify-between mt-4">
+                <div className="md:w-1/3 p-6 flex flex-col justify-between mt-4">
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">{title}</h2>
-                        <p className="mt-2 text-gray-600 dark:text-gray-300">{detailDescription}</p>
+                        <p className="mt-2 text-gray-600 dark:text-gray-300 text-justify">{detailDescription}</p>
 
                         {/* Tags */}
                         <div className="flex flex-wrap mt-4">
