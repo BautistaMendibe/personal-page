@@ -1,24 +1,22 @@
 import { useState } from "react";
-import ProjectModal from "./ProjectModal.astro";
+import ProjectModal from "./ProjectModal.jsx";
 
 const PROJECTS = [
     {
         title: "Sistema ERP para la gestión de tiendas de ropa",
         description: "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes. Integración con API de AFIP/ARCA.",
-        image: "/projects/calido-home.png",
+        image: "public/projects/calido-home.png",
         tags: ["Angular", "Node.js", "Tailwind"],
     },
     {
         title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
         description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
-        image: "/projects/cj-home.png",
+        image: "public/projects/cj-home.png",
         tags: ["Angular", "Node.js", "Bootstrap"],
     },
     {
         title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
         description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
-        link: "",
-        github: "",
         image: "public/projects/ga-home.png",
         tags: ["Angular", "Node.js", "Bootstrap"],
     },
@@ -69,5 +67,3 @@ export default function Projects() {
         </div>
     );
 }
-
-
