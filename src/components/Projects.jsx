@@ -5,15 +5,15 @@ const PROJECTS = [
     {
         title: "Sistema ERP para la gestión de tiendas de ropa",
         description: "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes. Integración con API de AFIP/ARCA.",
-        image: "public/projects/calido-home.png",
+        image: "/projects/calido-home.png",
         images: [
-            "public/projects/calido/1.png",
-            "public/projects/calido/2.png",
-            "public/projects/calido/3.png",
-            "public/projects/calido/4.png",
-            "public/projects/calido/5.jpg",
-            "public/projects/calido/6.png",
-            "public/projects/calido/7.png",
+            "/projects/calido/1.png",
+            "/projects/calido/2.png",
+            "/projects/calido/3.png",
+            "/projects/calido/4.png",
+            "/projects/calido/5.jpg",
+            "/projects/calido/6.png",
+            "/projects/calido/7.png",
         ],
         tags: ["Angular", "Node.js", "Tailwind"],
         detailDescription: "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes.\n" +
@@ -28,13 +28,13 @@ const PROJECTS = [
         title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
         description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
         detailDescription: "Desarrollé parte de la aplicación de la Caja de Jubilaciones y Pensiones de Córdoba Argentina, la cual pueden ver desde el link: https://app.cajajubilaciones.cba.gov.ar/ - Arquitectura en microservicios. - Frontend en Angular. - Backend en NodeJs. - Desarrollo en TypeScript.",
-        image: "public/projects/cj-home.png",
+        image: "/projects/cj-home.png",
         tags: ["Angular", "Node.js", "Bootstrap"],
         images: [
-            "public/projects/caja/1.png",
-            "public/projects/caja/2.png",
-            "public/projects/caja/3.png",
-            "public/projects/caja/4.png",
+            "/projects/caja/1.png",
+            "/projects/caja/2.png",
+            "/projects/caja/3.png",
+            "/projects/caja/4.png",
         ],
     },
     {
@@ -45,13 +45,13 @@ const PROJECTS = [
             "- Frontend en Angular.\n" +
             "- Backend en Node.js.\n" +
             "- Desarrollo en TypeScript.",
-        image: "public/projects/ga-home.png",
+        image: "/projects/ga-home.png",
         tags: ["Angular", "Node.js", "Bootstrap"],
         images: [
-            "public/projects/alimentos/1.png",
-            "public/projects/alimentos/2.png",
-            "public/projects/alimentos/3.png",
-            "public/projects/alimentos/4.png",
+            "/projects/alimentos/1.png",
+            "/projects/alimentos/2.png",
+            "/projects/alimentos/3.png",
+            "/projects/alimentos/4.png",
         ],
     },
 ];
