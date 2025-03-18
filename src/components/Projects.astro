@@ -4,6 +4,8 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Angular from "./icons/Angular.astro"
+import NodeJS from "./icons/NodeJS.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,16 +18,34 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#000000] text-white",
+    icon: Angular,
+  },
+  NODEJS: {
+    name: "Node JS",
+    class: "bg-[#01611f] text-white",
+    icon: NodeJS,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#bbaefc] text-white",
+    icon: NodeJS,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Clothing Store Management App - Sales, inventory, products, employees",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Application for managing a clothing store, including employee and customer registration.\n" +
+        "Application connected to the AFIP/ARCA API to invoice sales.\n" +
+        "Sales by card, cash, and QR code.\n" +
+        "Sales and purchase statistics.",
+    link: "",
+    github: "",
+    image: "/projects/calido-home.png",
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.BOOTSTRAP],
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
@@ -44,7 +64,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Bautista Mendibe portfolio" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
