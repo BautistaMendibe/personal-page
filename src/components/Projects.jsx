@@ -24,12 +24,19 @@ const PROJECTS = [
             "\n" +
             "El proyecto se desarrolló con Angular, Node y PostgresSQL.",
     },
-    //{
-    //    title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
-    //    description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
-    //    image: "public/projects/cj-home.png",
-    //    tags: ["Angular", "Node.js", "Bootstrap"],
-    //},
+    {
+        title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
+        description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
+        detailDescription: "Desarrollé parte de la aplicación de la Caja de Jubilaciones y Pensiones de Córdoba Argentina, la cual pueden ver desde el link: https://app.cajajubilaciones.cba.gov.ar/ - Arquitectura en microservicios. - Frontend en Angular. - Backend en NodeJs. - Desarrollo en TypeScript.",
+        image: "public/projects/cj-home.png",
+        tags: ["Angular", "Node.js", "Bootstrap"],
+        images: [
+            "public/projects/caja/1.png",
+            "public/projects/caja/2.png",
+            "public/projects/caja/3.png",
+            "public/projects/caja/4.png",
+        ],
+    },
     //{
     //    title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
     //    description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
