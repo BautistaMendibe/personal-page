@@ -1,15 +1,11 @@
-import { useState } from "react";
-
-export default function ProjectModal({ title, detailDescription, image, images, tags, onClose }) {
-    const [currentImage, setCurrentImage] = useState(0);
-
+export default function ProjectModal({ title, detailDescription, images, tags, onClose }) {
     return (
         <div
             className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50"
             onClick={onClose} // Cierra el modal si se hace clic fuera
         >
             <div
-                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-6xl relative shadow-lg flex flex-col md:flex-row"
+                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-6xl relative shadow-lg flex flex-col md:flex-row overflow-hidden"
                 onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
             >
                 {/* Botón de Cerrar */}
@@ -18,7 +14,7 @@ export default function ProjectModal({ title, detailDescription, image, images, 
                 </button>
 
                 {/* Sección de Información (Izquierda) */}
-                <div className="md:w-1/3 p-6 flex flex-col justify-between mt-4">
+                <div className="md:w-1/3 p-6 flex flex-col justify-between mt-4 overflow-y-auto">
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">{title}</h2>
                         <p className="mt-2 text-gray-600 dark:text-gray-300 text-justify">{detailDescription}</p>
@@ -35,21 +31,15 @@ export default function ProjectModal({ title, detailDescription, image, images, 
                 </div>
 
                 {/* Sección de Imágenes (Derecha) */}
-                <div className="md:w-2/3 p-4 flex flex-col items-center justify-center">
-                    <img src={images[currentImage]} alt={title} className="rounded-lg w-full object-cover shadow-lg" />
-
-                    {/* Miniaturas de imágenes */}
-                    <div className="flex gap-2 mt-4">
-                        {images.map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                className={`w-12 h-12 rounded-md cursor-pointer ${index === currentImage ? "border-2 border-blue-500" : ""}`}
-                                onClick={() => setCurrentImage(index)}
-                                alt={`Preview ${index}`}
-                            />
-                        ))}
-                    </div>
+                <div className="md:w-2/3 p-4 flex flex-col items-center justify-start overflow-y-auto space-y-4">
+                    {images.map((img, index) => (
+                        <img
+                            key={index}
+                            src={img}
+                            className="rounded-lg w-full object-cover shadow-lg"
+                            alt={`Imagen ${index}`}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
