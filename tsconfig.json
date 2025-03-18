@@ -1,11 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/bauti/OneDrive/Documentos/Portfolio/porfolio-base",
     "paths": {
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
