@@ -11,7 +11,7 @@ export default function BlogCard({ posts }) {
     );
 
     return (
-        <div className="blog-container grid grid-cols-3 gap-4">
+        <div className="blog-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {sortedPosts.map((post) => (
                 <a
                     key={post.slug}
