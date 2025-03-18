@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    // Obtener todos los posts de la colección "blog"
+    const posts = await getCollection("blog");
+
+    return posts.map((post) => ({
+        params: { slug: post.slug }, // Generar una página por cada post
+    }));
+}
+
+// Obtener el `slug` de la URL actual
+const { slug } = Astro.params;
+
+// Buscar el post en la colección
+const post = (await getCollection("blog")).find((p) => p.slug === slug);
+
+// Si no se encuentra el post, lanzar error 404
+if (!post) {
+    throw new Error(`Post not found: ${slug}`);
+}
+
+// Extraer datos del frontmatter
+const { title, date, description } = post.data;
+---
+
+<Layout>
+    <article class="max-w-3xl mx-auto p-6">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 mt-10">{title}</h1>
+        <p class="text-gray-500">{date}</p>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">{description}</p>
+
+        <div class="prose dark:prose-invert mt-6">
+            {post.body}
+        </div>
+    </article>
+
+</Layout>
+

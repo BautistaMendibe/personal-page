@@ -18,7 +18,7 @@ export default function BlogCard({ posts }) {
                         <h1 className="text-xl font-semibold text-gray-900 hover:text-blue-500 transition">
                             {post.data.title}
                         </h1>
-                        <p className="text-gray-600">{post.data.description}</p>
+                        <p className="text-gray-600">{post.data.date}</p>
                     </div>
                 </a>
             ))}

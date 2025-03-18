@@ -1,6 +1,6 @@
 ---
 title: "Primer intento. Creando una app de TV  y mis primeros USD100"
-date: "2020-12-04"
+date: "04/12/2020"
 img: "public/blog/tvgarden.jpg"
 ---
 

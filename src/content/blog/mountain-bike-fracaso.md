@@ -1,6 +1,6 @@
 ---
 title: "Mountain Bike Community. Un fracaso rotundo."
-date: "2020-12-19"
+date: "19/12/2020"
 img: "public/blog/mountain-bike.jpg"
 ---
 
