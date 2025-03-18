@@ -1,11 +1,15 @@
-export default function ProjectModal({ title, detailDescription, images, tags, onClose }) {
+import { useState } from "react";
+
+export default function ProjectModal({ title, detailDescription, image, images, tags, onClose }) {
+    const [currentImage, setCurrentImage] = useState(0);
+
     return (
         <div
             className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50"
             onClick={onClose} // Cierra el modal si se hace clic fuera
         >
             <div
-                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-6xl relative shadow-lg flex flex-col md:flex-row overflow-hidden"
+                className="bg-white h-[80vh] dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-6xl relative shadow-lg flex flex-col md:flex-row"
                 onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
             >
                 {/* Botón de Cerrar */}
@@ -14,7 +18,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
                 </button>
 
                 {/* Sección de Información (Izquierda) */}
-                <div className="md:w-1/3 p-6 flex flex-col justify-between mt-4 overflow-y-auto">
+                <div className="md:w-1/3 p-6 flex flex-col justify-between mt-4">
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">{title}</h2>
                         <p className="mt-2 text-gray-600 dark:text-gray-300 text-justify">{detailDescription}</p>
