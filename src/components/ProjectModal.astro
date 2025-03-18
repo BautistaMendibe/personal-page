@@ -1,12 +1,14 @@
 ---
 import type { ProjectProps } from "../types.d.ts";
-const { title, description, link, github, image, tags, onClose } = Astro.props;
+
+const props = Astro.props as ProjectProps;
+const { title, description, link, github, image, tags, onClose } = props;
 ---
 
 <div class="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg max-w-lg w-full relative shadow-lg">
         <!-- Botón de Cerrar -->
-        <button class="absolute top-3 right-3 text-gray-600 dark:text-gray-300" onClick={onClose}>
+        <button class="absolute top-3 right-3 text-gray-600 dark:text-gray-300" onclick={onClose}>
             ✖
         </button>
 
