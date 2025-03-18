@@ -6,20 +6,36 @@ const PROJECTS = [
         title: "Sistema ERP para la gestión de tiendas de ropa",
         description: "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes. Integración con API de AFIP/ARCA.",
         image: "public/projects/calido-home.png",
+        images: [
+            "public/projects/calido/1.png",
+            "public/projects/calido/2.png",
+            "public/projects/calido/3.png",
+            "public/projects/calido/4.png",
+            "public/projects/calido/5.jpg",
+            "public/projects/calido/6.png",
+            "public/projects/calido/7.png",
+        ],
         tags: ["Angular", "Node.js", "Tailwind"],
+        detailDescription: "Aplicación para la gestión de una tienda de ropa, incluyendo el registro de empleados y clientes.\n" +
+            "Aplicación conectada a la API de AFIP/ARCA para la facturación de ventas y a la API de SIRO para el pago con código QR.\n" +
+            "Ventas con tarjeta, efectivo y código QR.\n" +
+            "Estadísticas de ventas y compras.\n" +
+            "PDF personalizables para informes, órdenes de compra y control de inventario.\n" +
+            "\n" +
+            "El proyecto se desarrolló con Angular, Node y PostgresSQL.",
     },
-    {
-        title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
-        description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
-        image: "public/projects/cj-home.png",
-        tags: ["Angular", "Node.js", "Bootstrap"],
-    },
-    {
-        title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
-        description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
-        image: "public/projects/ga-home.png",
-        tags: ["Angular", "Node.js", "Bootstrap"],
-    },
+    //{
+    //    title: "Caja de Jubilaciones - CIDI - Gobierno de Córdoba",
+    //    description: "Plataforma para la gestión de pensiones y jubilaciones del gobierno de Córdoba.",
+    //    image: "public/projects/cj-home.png",
+    //    tags: ["Angular", "Node.js", "Bootstrap"],
+    //},
+    //{
+    //    title: "Gestión de Calidad Alimentaria - CIDI - Gobierno de Córdoba",
+    //    description: "Plataforma para la gestión de trámites vinculados al transporte de alimentos en la provincia.",
+    //    image: "public/projects/ga-home.png",
+    //    tags: ["Angular", "Node.js", "Bootstrap"],
+    //},
 ];
 
 export default function Projects() {
