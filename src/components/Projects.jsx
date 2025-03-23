@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import ProjectModal from "./ProjectModal.jsx";
 
 const PROJECTS = [
@@ -68,7 +68,8 @@ export default function Projects() {
                     onClick={() => setSelectedProject(project)}
                 >
                     <div className="w-full md:w-1/2">
-                        <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+                        <div
+                            className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
                             <img
                                 alt={project.title}
                                 className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -85,9 +86,10 @@ export default function Projects() {
                             <ul className="flex flex-row mb-2 gap-x-2">
                                 {project.tags.map((tag, i) => (
                                     <li key={i}>
-                    <span className="flex gap-x-2 rounded-full text-xs py-1 px-2 bg-gray-300">
-                      {tag}
-                    </span>
+                            <span key={i}
+                          className="flex gap-x-2 text-xs md:text-sm px-2 md:px-3 py-1 rounded-full bg-gray-300 dark:bg-gray-600 mr-2">
+                                {tag}
+                            </span>
                                     </li>
                                 ))}
                             </ul>
@@ -98,7 +100,7 @@ export default function Projects() {
                 </article>
             ))}
 
-            {selectedProject && <ProjectModal {...selectedProject} onClose={() => setSelectedProject(null)} />}
+            {selectedProject && <ProjectModal {...selectedProject} onClose={() => setSelectedProject(null)}/>}
         </div>
     );
 }
