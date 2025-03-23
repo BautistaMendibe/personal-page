@@ -7,11 +7,11 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
             onClick={onClose} // Cierra el modal si se hace clic fuera
         >
             <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-7xl max-h-screen md:max-h-[85vh] overflow-hidden shadow-lg flex flex-col md:flex-row"
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-7xl max-h-[90vh] md:max-h-[85vh] overflow-hidden shadow-lg flex flex-col md:flex-row"
                 onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
             >
                 {/* Botón de Cerrar */}
-                <button className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 text-xl md:text-2xl" onClick={onClose}>
+                <button className="absolute top-3 right-3 my-8 mr-2 text-gray-600 dark:text-gray-300 text-xl md:text-2xl " onClick={onClose}>
                     ✖
                 </button>
 
@@ -29,7 +29,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
 
                 {/* Sección de Información (Ocupa la otra mitad en móviles, hace scroll si el contenido es grande) */}
                 <div className="w-full h-1/2 md:h-auto md:w-1/3 p-4 md:p-6 flex flex-col">
-                    <h2 className="text-lg md:text-3xl font-bold text-gray-800 dark:text-white">{title}</h2>
+                    <h2 className="md:text-3xl font-bold text-gray-800 dark:text-white">{title}</h2>
                     <p className="mt-2 text-xs md:text-lg text-gray-600 dark:text-gray-300 text-justify">{detailDescription}</p>
 
                     {/* Tags */}
