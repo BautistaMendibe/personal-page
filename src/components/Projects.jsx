@@ -92,6 +92,7 @@ export default function Projects() {
                                 ))}
                             </ul>
                             <div className="mt-2 text-gray-700 dark:text-gray-400">{project.description}</div>
+                            <a className={"text-blue-600"}>Ver más</a>
                         </div>
                     </div>
                 </article>
