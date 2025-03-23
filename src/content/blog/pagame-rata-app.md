@@ -3,9 +3,13 @@ title: "PagameRata 🐭: una app que nació en una juntada"
 date: "23/03/2025"
 img: "/blog/pagame-rata.png"
 ---
+<div style="width: 100%">
 
 <div style="text-align: center;">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCv-GWabqoGjwt2fFRnikcbx4gB0u3kaWin81IBgP8shLzf1XbgFsdP8npbmxKemAUR2cwzi-sBX5yTnnTOXoyQzI7-7-zqx7JfWQ4VvN0cXc1B41T-rLoO4nQWsRHT2-nZ5QoVEnUTH25nqCXrXjxnQ31Kigyzc3tCF-pbrB8d9Y2EkjiECWVrfZyuvQ/w622-h421/Screenshot%202025-03-23%20131018.png" width="622" alt="Pantalla de ingreso de datos" />
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCv-GWabqoGjwt2fFRnikcbx4gB0u3kaWin81IBgP8shLzf1XbgFsdP8npbmxKemAUR2cwzi-sBX5yTnnTOXoyQzI7-7-zqx7JfWQ4VvN0cXc1B41T-rLoO4nQWsRHT2-nZ5QoVEnUTH25nqCXrXjxnQ31Kigyzc3tCF-pbrB8d9Y2EkjiECWVrfZyuvQ/w622-h421/Screenshot%202025-03-23%20131018.png" alt="Pantalla de ingreso de datos" />
 </div>
 
 <p>Una noche con amigos estábamos tratando de dividir los gastos de la juntada: uno había puesto la carne, otro la bebida, otro algo más... y nadie sabía bien cuánto debía poner cada uno. Después de varios intentos fallidos con cuentas mentales, pensé: <i>“¿y si hago una página que lo resuelva sola?”</i></p>
@@ -36,4 +40,4 @@ img: "/blog/pagame-rata.png"
 <div style="text-align: center;">
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5ntqnz7kB4fIDxs-X-lyUHOlhVZNPMO2Mcx4ZcIjYGLdIDKY0663G0T3sOtEcDEbHKWju1okQS-ND_YspZJ063_p7w6lPLIaqdgfU3x5Uyijk3DkyJyIrHieOk5Y09DzICWYTBHBKBr6V4v46oRLWfOavNA7kwjhg66RRFFAKXNWeSn9UL1F2klWH8vw/s320/WhatsApp%20Image%202025-03-23%20at%2013.05.07.jpeg" width="243" alt="Captura móvil de la app PagameRata" />
 </div>
-
+</div>
