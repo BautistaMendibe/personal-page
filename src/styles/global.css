@@ -19,7 +19,6 @@
 
 /* Esto limita el ancho y evita que cualquier elemento lo rompa */
 .container, .prose, .blog-wrapper, .post-content, .post-body {
-    max-width: 100%;
     overflow-x: hidden;
     padding-left: 1rem;
     padding-right: 1rem;
