@@ -7,7 +7,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
             onClick={onClose}
         >
             <div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-7xl max-h-[90vh] overflow-hidden shadow-lg flex flex-col md:flex-row relative"
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-7xl max-h-[90vh] overflow-hidden shadow-lg flex flex-col md:flex-row relative overflow-x-hidden"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -30,7 +30,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
                 </div>
 
                 {/* Detalle */}
-                <div className="w-full md:w-1/3 p-4 md:p-6 flex flex-col overflow-y-auto">
+                <div className="w-full mt-2 md:w-1/3 p-4 md:p-6 flex flex-col overflow-y-auto break-words">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white">{title}</h2>
                     <div className="mt-4 text-sm md:text-base text-gray-600 dark:text-gray-300 whitespace-pre-line">
                         {detailDescription}
