@@ -54,6 +54,21 @@ const PROJECTS = [
             "/projects/alimentos/4.png",
         ],
     },
+    {
+        title: "PagameRata - Página para dividir los gastos con amigos",
+        description: "Proyecto de fin de semana que ahora cuenta con 33 mil usuarios.",
+        detailDescription: "Un fin de semana creé esta página para dividir la cuenta cuando un amigo puso X cantidad, otro Y cantidad\n" +
+            "- Lo publiqué en tik tok y se volvió viral con más de 3 millones de vistas.\n" +
+            "- 33 Mil usuarios.\n" +
+            "- Desplegada en Vercel.\n",
+        image: "/projects/pr-home.png",
+        tags: ["Angular", "Bootstrap"],
+        images: [
+            "/projects/pagamerata/1.png",
+            "/projects/pagamerata/2.png",
+            "/projects/pagamerata/3.png"
+        ],
+    },
 ];
 
 export default function Projects() {
