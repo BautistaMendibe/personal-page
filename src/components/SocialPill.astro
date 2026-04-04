@@ -8,7 +8,7 @@ const baseClass =
   {...rest}
   href={href}
   target={isMailto ? undefined : "_blank"}
-  rel={isMailto ? "noopener" : "noopener noreferrer"}
+  rel={isMailto ? undefined : "noopener noreferrer"}
   role="link"
   class:list={[baseClass, className]}
 >
