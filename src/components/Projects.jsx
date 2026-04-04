@@ -3,7 +3,7 @@ import ProjectModal from "./ProjectModal.jsx";
 
 const PROJECTS = [
   {
-    title: "Sistema ERP para la gestión de tiendas de ropa ",
+    title: "Sistema ERP para la gestión de tiendas de ropa",
     description:
       "Aplicación para la gestión de una tienda de ropa, incluyendo proveedores, empleados, pagos. Integración con API de AFIP/ARCA.",
     image: "/projects/calido-home.png",
@@ -106,50 +106,79 @@ const PROJECTS = [
   },
 ];
 
+const MAX_TAGS = 4;
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className="flex flex-col gap-y-20 mb-10">
-      {PROJECTS.map((project, index) => (
-        <article
-          key={index}
-          className="flex flex-col-reverse items-center md:flex-row gap-6 items-start bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl transition duration-300 cursor-pointer overflow-hidden"
-          onClick={() => setSelectedProject(project)}
-        >
-          {/* Texto */}
-          <div className="flex flex-col justify-between w-full md:w-1/2 p-6">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-              {project.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-3 py-1 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <span className="text-blue-600 dark:text-blue-400 font-medium">
-              Ver más →
-            </span>
-          </div>
+    <>
+      <ul className="mb-10 grid list-none grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-7">
+        {PROJECTS.map((project, index) => {
+          const extraTags = Math.max(0, project.tags.length - MAX_TAGS);
+          return (
+            <li key={index} className="min-h-0">
+              <button
+                type="button"
+                onClick={() => setSelectedProject(project)}
+                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-200/90 bg-white text-left shadow-md ring-1 ring-black/[0.03] transition hover:border-blue-200 hover:shadow-lg hover:ring-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:border-gray-700/90 dark:bg-gray-900 dark:ring-white/[0.04] dark:hover:border-blue-500/40"
+              >
+                <div className="relative aspect-[16/10] shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img
+                    src={project.image}
+                    alt=""
+                    className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-900/50 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100"
+                    aria-hidden="true"
+                  />
+                </div>
 
-          {/* Imagen */}
-          <div className="w-full mx-2 my-2 md:w-1/2 ">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="object-cover w-full h-64 md:h-full rounded-t-xl md:rounded-r-xl md:rounded-l-none border border-gray-300 dark:border-gray-700 transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-        </article>
-      ))}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <h3 className="text-lg font-bold leading-snug tracking-tight text-gray-900 dark:text-white line-clamp-2 min-h-[2.75rem] sm:text-xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300 line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.tags.slice(0, MAX_TAGS).map((tag, i) => (
+                      <span
+                        key={i}
+                        className="rounded-md border border-gray-200/90 bg-gray-50 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-gray-700 dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                    {extraTags > 0 && (
+                      <span className="rounded-md bg-gray-200/80 px-2 py-0.5 text-[11px] font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+                        +{extraTags}
+                      </span>
+                    )}
+                  </div>
+
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                    Ver detalle
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </div>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
 
       {selectedProject && (
         <ProjectModal
@@ -157,6 +186,6 @@ export default function Projects() {
           onClose={() => setSelectedProject(null)}
         />
       )}
-    </section>
+    </>
   );
 }
