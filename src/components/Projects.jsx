@@ -113,7 +113,7 @@ export default function Projects() {
 
   return (
     <>
-      <ul className="mb-10 grid list-none grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-7">
+      <ul className="mb-10 grid list-none grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-7 xl:grid-cols-3">
         {PROJECTS.map((project, index) => {
           const extraTags = Math.max(0, project.tags.length - MAX_TAGS);
           return (
@@ -121,7 +121,7 @@ export default function Projects() {
               <button
                 type="button"
                 onClick={() => setSelectedProject(project)}
-                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-200/90 bg-white text-left shadow-md ring-1 ring-black/[0.03] transition hover:border-blue-200 hover:shadow-lg hover:ring-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:border-gray-700/90 dark:bg-gray-900 dark:ring-white/[0.04] dark:hover:border-blue-500/40"
+                className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-200/90 bg-white text-left shadow-md ring-1 ring-black/[0.03] transition [touch-action:manipulation] hover:border-blue-200 hover:shadow-lg hover:ring-blue-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:scale-[0.99] dark:border-gray-700/90 dark:bg-gray-900 dark:ring-white/[0.04] dark:hover:border-blue-500/40"
               >
                 <div className="relative aspect-[16/10] shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
                   <img
@@ -135,7 +135,7 @@ export default function Projects() {
                   />
                 </div>
 
-                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <div className="flex flex-1 flex-col p-4 sm:p-6">
                   <h3 className="text-lg font-bold leading-snug tracking-tight text-gray-900 dark:text-white line-clamp-2 min-h-[2.75rem] sm:text-xl">
                     {project.title}
                   </h3>

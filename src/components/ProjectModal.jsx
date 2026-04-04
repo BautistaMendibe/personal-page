@@ -95,7 +95,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 transition-opacity duration-200 ease-out ${
+      className={`fixed inset-0 z-50 flex items-center justify-center p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[max(0.75rem,env(safe-area-inset-top))] transition-opacity duration-200 ease-out sm:p-5 ${
         entered ? "opacity-100" : "opacity-0"
       }`}
       role="presentation"
@@ -112,7 +112,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={descriptionId}
-        className={`relative z-10 flex max-h-[min(94vh,920px)] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] transition duration-200 ease-out dark:border-gray-700/90 dark:bg-gray-900 dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] md:max-h-[92vh] ${
+        className={`relative z-10 flex max-h-[min(94dvh,920px)] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-gray-200/90 bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] transition duration-200 ease-out dark:border-gray-700/90 dark:bg-gray-900 dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] md:max-h-[92vh] ${
           entered ? "translate-y-0 scale-100 opacity-100" : "translate-y-2 scale-[0.98] opacity-0"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -238,7 +238,7 @@ export default function ProjectModal({ title, detailDescription, images, tags, o
           {/* Descripción: altura limitada en móvil; panel lateral con scroll en md+ */}
           <section
             id={descriptionId}
-            className="flex max-h-[min(42vh,360px)] shrink-0 flex-col overflow-y-auto overscroll-contain border-t border-gray-200/90 bg-gradient-to-b from-white to-gray-50/90 px-3 py-3 dark:border-gray-700/90 dark:from-gray-900 dark:to-gray-950/80 sm:px-4 sm:py-4 md:max-h-none md:h-full md:w-[min(100%,19rem)] md:shrink-0 md:border-l md:border-t-0 md:py-4 lg:w-80"
+            className="flex max-h-[min(45dvh,380px)] shrink-0 flex-col overflow-y-auto overscroll-contain border-t border-gray-200/90 bg-gradient-to-b from-white to-gray-50/90 px-3 py-3 dark:border-gray-700/90 dark:from-gray-900 dark:to-gray-950/80 sm:max-h-[min(42vh,360px)] sm:px-4 sm:py-4 md:max-h-none md:h-full md:w-[min(100%,19rem)] md:shrink-0 md:border-l md:border-t-0 md:py-4 lg:w-80"
           >
             <div className="relative overflow-hidden rounded-xl border border-gray-200/80 bg-white/90 shadow-sm ring-1 ring-black/[0.03] dark:border-gray-700/80 dark:bg-gray-900/60 dark:ring-white/[0.06]">
               <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500" aria-hidden="true" />

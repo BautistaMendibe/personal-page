@@ -15,7 +15,7 @@ export default function BlogCard({ posts }) {
           <li key={post.slug}>
             <a
               href={`/blog/${post.slug}`}
-              className="group flex items-center gap-4 rounded-lg px-3 py-3.5 transition-colors hover:bg-gray-50/90 sm:gap-5 sm:px-4 sm:py-4 dark:hover:bg-gray-800/50"
+              className="group flex min-h-[3.25rem] items-center gap-3 rounded-lg px-3 py-3.5 transition-colors [touch-action:manipulation] hover:bg-gray-50/90 active:bg-gray-100/80 sm:min-h-0 sm:gap-5 sm:px-4 sm:py-4 dark:hover:bg-gray-800/50 dark:active:bg-gray-800/70"
             >
               {post.data.img ? (
                 <div className="relative h-12 w-14 shrink-0 overflow-hidden rounded-md bg-gray-100 ring-1 ring-gray-200/80 dark:bg-gray-800 dark:ring-gray-700">

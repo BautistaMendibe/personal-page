@@ -26,15 +26,16 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex w-full justify-center px-2 pt-[max(0.5rem,env(safe-area-inset-top))]"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    id="header-nav"
+    class="flex max-w-[min(100%,calc(100vw-0.75rem))] flex-wrap items-center justify-center gap-x-0.5 gap-y-1 rounded-full px-2 py-1.5 text-[0.8125rem] font-medium leading-none text-gray-600 dark:text-gray-200 sm:flex-nowrap sm:gap-x-0 sm:px-3 sm:py-2 sm:text-sm"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          class="relative shrink-0 rounded-full px-2 py-2.5 transition [touch-action:manipulation] hover:text-blue-500 active:bg-black/5 dark:active:bg-white/10 sm:px-2.5 sm:py-2 dark:hover:text-blue-500"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,7 +43,9 @@ const navItems = [
         </a>
       ))
     }
-    <ThemeToggle />
+    <span class="flex shrink-0 items-center">
+      <ThemeToggle />
+    </span>
   </nav>
 </header>
 

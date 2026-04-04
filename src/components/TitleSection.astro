@@ -1,5 +1,8 @@
 <h2
-	class={`flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white ${Astro.props.className}`}
+	class:list={[
+		"mb-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-semibold leading-tight text-black/80 dark:text-white sm:mb-6 sm:text-3xl",
+		Astro.props.className,
+	]}
 >
     <slot />
 </h2>

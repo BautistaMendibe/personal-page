@@ -8,18 +8,18 @@ const personalImageAlt = "Bautista Mendibe"
 
 ---
 
-<div>
+<div class="min-w-0">
   <!-- Imagen pequeña (visible solo en móviles) -->
   <img
-      class="rounded-full object-cover shadow-lg size-24  block sm:hidden mb-4"
+      class="mb-5 block size-28 rounded-full object-cover shadow-lg ring-1 ring-black/5 dark:ring-white/10 sm:hidden"
       src="/img-perfil.png"
       alt={personalImageAlt}
   />
 
   <div class="flex flex-col sm:flex-row">
-    <div class="max-w-xl">
+    <div class="min-w-0 max-w-xl">
       <h1
-          class="text-4xl font-bold tracking-tight text-gray-800 mb-2 sm:text-5xl dark:text-white"
+          class="text-3xl font-bold leading-tight tracking-tight text-gray-800 dark:text-white sm:text-5xl sm:leading-[1.1]"
       >
         Bautista Mendibe
       </h1>
@@ -32,24 +32,29 @@ const personalImageAlt = "Bautista Mendibe"
         <Badge>Disponible para trabajar</Badge>
       </a>
       <p
-          class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+          class="mt-5 text-base leading-relaxed text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 sm:mt-6 sm:text-xl sm:leading-snug"
       >
         Ingeniero en Sistemas con +3 años en la industria. Comparto lo que voy aprendiendo del desarrollo y emprendimiento.
       </p>
-      <nav class="flex flex-wrap gap-4 mt-8">
-        <SocialPill>
-          <MailIcon class="size-4" />
-          bautistamendibe10@gmail.com
+      <nav class="mt-7 flex w-full max-w-lg flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
+        <SocialPill
+          href="mailto:bautistamendibe10@gmail.com"
+          class="w-full justify-center sm:w-auto sm:justify-start"
+        >
+          <MailIcon class="size-4 shrink-0" />
+          <span class="min-w-0 break-all text-center sm:break-normal sm:text-left"
+            >bautistamendibe10@gmail.com</span
+          >
         </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/bautista-mendibe-981998134/">
-          <LinkedInIcon class="size-4" />
+        <SocialPill href="https://www.linkedin.com/in/bautista-mendibe-981998134/" class="w-full justify-center sm:w-auto sm:justify-start">
+          <LinkedInIcon class="size-4 shrink-0" />
           LinkedIn
         </SocialPill>
       </nav>
     </div>
 
     <img
-        class="rounded-full object-cover shadow-lg size-52 ml-4 hidden sm:block justify-center mt-3"
+        class="mt-3 ml-4 hidden size-52 shrink-0 rounded-full object-cover shadow-lg ring-1 ring-black/5 dark:ring-white/10 sm:block"
         src="/img-perfil.png"
         alt={personalImageAlt}
     />
