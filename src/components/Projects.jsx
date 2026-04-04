@@ -113,7 +113,7 @@ export default function Projects() {
 
   return (
     <>
-      <ul className="mb-10 grid list-none grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-7 xl:grid-cols-3">
+      <ul className="mb-6 grid list-none grid-cols-1 gap-5 sm:mb-8 sm:gap-6 md:grid-cols-2 md:gap-7 md:mb-10 xl:grid-cols-3">
         {PROJECTS.map((project, index) => {
           const extraTags = Math.max(0, project.tags.length - MAX_TAGS);
           return (
