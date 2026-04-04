@@ -7,5 +7,12 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt(), react()],
-  site: 'https://bautistamendibe10@gmail.com/'
+  site: 'https://bautistamendibe10@gmail.com/',
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
+  },
 });
