@@ -25,9 +25,6 @@ const PROJECTS = [
     ▪️ Estadísticas de ventas y compras con Grafana.
     ▪️ PDF personalizables para informes, órdenes de compra y control de inventario.
 
-    ⚒️ El proyecto se desarrolló con Angular, Node y PostgresSQL.
-    🚀 Desplegado en Vercel.
-
     🔗 Github Frontend: https://github.com/BautistaMendibe/calido-frontend
     🔗 Github Backend: https://github.com/BautistaMendibe/calido-backend
 
